@@ -1,0 +1,10 @@
+l=input().split()
+n=len(l)
+s=[]
+count=0
+for i in l:
+    if i not in s:
+        s.append(i)
+    else:
+        print(i)
+        break
