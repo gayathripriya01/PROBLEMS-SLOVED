@@ -1,0 +1,16 @@
+class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        Traverse(root);
+        return root;
+    }
+    public void Traverse(TreeNode root){
+        if(root==null){
+            return;
+        }
+        TreeNode temp=root.left;
+        root.left=root.right;
+        root.right=temp;
+        Traverse(root.left);
+        Traverse(root.right);
+    }
+}
